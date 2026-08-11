@@ -1,300 +1,690 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Megacable Querétaro | 200 Megas + TV + Telefonía $500</title>
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            line-height: 1.5;
-            padding-bottom: 100px;
-        }
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            border-bottom: 3px solid #3b82f6;
-            padding: 24px 16px;
-            text-align: center;
-        }
-        .logo-badge {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
-        }
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 8px;
-            line-height: 1.2;
-        }
-        h1 span {
-            color: #38bdf8;
-        }
-        .subtitle {
-            font-size: 0.95rem;
-            color: #94a3b8;
-        }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .urgency-box {
-            width: 100%;
-            background: rgba(239, 68, 68, 0.15);
-            border: 1px solid rgba(239, 68, 68, 0.4);
-            color: #fca5a5;
-            padding: 12px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .card {
-            width: 100%;
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border: 2px solid #334155;
-            border-radius: 18px;
-            padding: 24px 18px;
-            text-align: center;
-            box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 5px;
-            background: linear-gradient(90deg, #22c55e, #3b82f6);
-            border-radius: 18px 18px 0 0;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 20px 0;
-            width: 100%;
-        }
-        .feature-box {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 14px 10px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .feature-box strong {
-            display: block;
-            color: #38bdf8;
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-        }
-        .feature-box span {
-            font-size: 0.8rem;
-            color: #cbd5e1;
-        }
-        .price-box {
-            margin: 15px 0 20px 0;
-            background: rgba(34, 197, 94, 0.08);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 12px;
-            border-radius: 12px;
-        }
-        .price-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: #94a3b8;
-            letter-spacing: 1px;
-        }
-        .price {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #22c55e;
-            line-height: 1.1;
-        }
-        .price span {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            font-weight: 400;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            background: #22c55e;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 800;
-            padding: 16px;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.1s ease;
-        }
-        .btn:active {
-            transform: scale(0.97);
-        }
-        .gifts-card {
-            width: 100%;
-            background: #111827;
-            border: 2px solid #1f2937;
-            border-radius: 18px;
-            padding: 22px 18px;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .gifts-card h3 {
-            color: #f8fafc;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            text-align: center;
-            border-bottom: 1px solid #374151;
-            padding-bottom: 10px;
-        }
-        .gift-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 12px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: #d1d5db;
-        }
-        .gift-item strong {
-            color: #38bdf8;
-            display: inline-block;
-        }
-        .sticky-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(11, 15, 25, 0.95);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 16px;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-        }
-        .sticky-btn {
-            background: #22c55e;
-            color: white;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.05rem;
-            padding: 14px 20px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 480px;
-            text-align: center;
-            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.5);
-            text-transform: uppercase;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>200 Megas + TV + Llamadas + Amazon Prime | $500/mes | Distribuidor Autorizado Megacable Querétaro</title>
+<meta name="description" content="Contrata Internet Megacable en Querétaro: 200 Megas, 170 canales, llamadas ilimitadas y Amazon Prime incluido. $500 al mes. Instalación rápida, atención directa por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0B1330;
+    --navy-800:#131F45;
+    --navy-700:#1B2B5C;
+    --teal-400:#29D9C4;
+    --teal-300:#7BEFDF;
+    --coral-500:#FF5A36;
+    --wa-green:#22C35E;
+    --wa-green-dark:#1AA34E;
+    --cream-50:#F6F7FB;
+    --ink-900:#0B1330;
+    --ink-600:#4C5578;
+    --line:#E3E6F0;
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    color:var(--ink-900);
+    background:var(--cream-50);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+  .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--teal-400);
+    outline-offset:2px;
+  }
+
+  /* ---------- Top trust bar ---------- */
+  .topbar{
+    background:var(--navy-900);
+    color:#C7CCE6;
+    font-size:13px;
+    padding:8px 0;
+    text-align:center;
+    letter-spacing:.02em;
+  }
+  .topbar strong{color:var(--teal-300);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 20% -10%, rgba(41,217,196,0.18), transparent 55%),
+      radial-gradient(ellipse at 90% 0%, rgba(255,90,54,0.12), transparent 45%),
+      linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color:#fff;
+    padding:44px 0 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .signal-lines{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:0.35;
+  }
+  .signal-lines svg{width:100%; height:100%;}
+  .badge-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:rgba(41,217,196,0.12);
+    border:1px solid rgba(41,217,196,0.4);
+    color:var(--teal-300);
+    font-size:12.5px;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:999px;
+    letter-spacing:.02em;
+  }
+  .hero-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .hero h1{
+    font-size:clamp(30px, 7vw, 44px);
+    line-height:1.08;
+    margin-bottom:14px;
+  }
+  .hero h1 span{color:var(--teal-400);}
+  .hero-sub{
+    color:#C7CCE6;
+    font-size:16px;
+    max-width:520px;
+    margin-bottom:22px;
+  }
+  .zone-line{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:#9AA3CC;
+    margin-bottom:26px;
+  }
+  .zone-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--coral-500);
+    box-shadow:0 0 0 4px rgba(255,90,54,0.2);
+    flex-shrink:0;
+  }
+
+  /* Speed gauge — signature element */
+  .speed-card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:var(--radius);
+    padding:22px;
+    backdrop-filter:blur(6px);
+  }
+  .speed-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:14px;
+  }
+  .speed-label{font-size:12px; color:#9AA3CC; text-transform:uppercase; letter-spacing:.08em;}
+  .speed-value{font-size:15px; color:var(--teal-300); font-weight:600;}
+  .gauge{
+    width:100%;
+    height:12px;
+    background:rgba(255,255,255,0.08);
+    border-radius:999px;
+    overflow:hidden;
+    margin-bottom:8px;
+    position:relative;
+  }
+  .gauge-fill{
+    height:100%;
+    width:0%;
+    border-radius:999px;
+    background:linear-gradient(90deg, var(--teal-400), var(--teal-300));
+    animation:fillGauge 1.6s ease-out .3s forwards;
+  }
+  @keyframes fillGauge{ to{ width:92%; } }
+  @media (prefers-reduced-motion: reduce){
+    .gauge-fill{ animation:none; width:92%; }
+  }
+  .gauge-scale{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:#6C76A6;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .price-row{
+    display:flex;
+    align-items:flex-end;
+    gap:6px;
+    margin:20px 0 4px;
+  }
+  .price-num{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:44px;
+    line-height:1;
+  }
+  .price-period{color:#9AA3CC; font-size:15px; padding-bottom:6px;}
+  .price-note{font-size:12.5px; color:#7B84AD; margin-bottom:18px;}
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    font-weight:700;
+    font-size:16px;
+    padding:15px 22px;
+    border-radius:11px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+    width:100%;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-wa{
+    background:var(--wa-green);
+    color:#06210F;
+    box-shadow:0 10px 24px -8px rgba(34,195,94,0.55);
+  }
+  .btn-wa:hover{background:var(--wa-green-dark);}
+  .btn svg{flex-shrink:0;}
+
+  .trust-strip{
+    margin-top:16px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:12.5px;
+    color:#9AA3CC;
+  }
+  .trust-strip span{display:flex; align-items:center; gap:6px;}
+
+  /* ---------- Section shared ---------- */
+  section{padding:52px 0;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--coral-500);
+    text-transform:uppercase;
+    letter-spacing:.09em;
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-title{
+    font-size:clamp(24px, 5vw, 32px);
+    margin-bottom:12px;
+  }
+  .section-sub{
+    color:var(--ink-600);
+    font-size:15.5px;
+    max-width:520px;
+    margin-bottom:32px;
+  }
+
+  /* ---------- Features ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .feature-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .feature-icon{
+    width:42px; height:42px;
+    border-radius:10px;
+    background:var(--navy-900);
+    color:var(--teal-400);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px;
+  }
+  .feature-card h3{font-size:17px; margin-bottom:6px;}
+  .feature-card p{font-size:14px; color:var(--ink-600);}
+
+  /* ---------- How it works ---------- */
+  .steps-section{background:var(--navy-900); color:#fff;}
+  .steps-section .section-sub{color:#9AA3CC;}
+  .steps-section .eyebrow{color:var(--teal-400);}
+  .step-list{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+    border-top:1px solid rgba(255,255,255,0.12);
+  }
+  .step{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    gap:16px;
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .step-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    color:var(--teal-300);
+    background:rgba(41,217,196,0.1);
+    border:1px solid rgba(41,217,196,0.35);
+    width:40px; height:40px;
+    border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step h3{font-size:16.5px; margin-bottom:5px;}
+  .step p{font-size:14px; color:#9AA3CC;}
+
+  /* ---------- Bonus / extras ---------- */
+  .extras-note{
+    background:#fff;
+    border:1px dashed #C9CEE6;
+    border-radius:var(--radius);
+    padding:16px 18px;
+    font-size:13.5px;
+    color:var(--ink-600);
+    margin-bottom:26px;
+  }
+  .extras-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .extra-item{
+    display:flex;
+    gap:14px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+  }
+  .extra-emoji{font-size:22px; flex-shrink:0; line-height:1;}
+  .extra-item h4{font-size:14.5px; margin-bottom:3px;}
+  .extra-item p{font-size:13px; color:var(--ink-600);}
+
+  /* ---------- Proof photo ---------- */
+  .proof-section{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+    align-items:center;
+  }
+  .proof-photo{
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--line);
+    background:linear-gradient(135deg, var(--navy-800), var(--navy-900));
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#7B84AD;
+    font-size:13px;
+    text-align:center;
+    padding:20px;
+  }
+  .proof-photo img{width:100%; height:100%; object-fit:cover;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-item summary{
+    padding:18px 0;
+    font-weight:600;
+    font-size:15.5px;
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    font-size:22px;
+    color:var(--coral-500);
+    flex-shrink:0;
+    transition:transform .2s ease;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{
+    font-size:14.5px;
+    color:var(--ink-600);
+    padding-bottom:18px;
+    max-width:640px;
+  }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background:linear-gradient(160deg, var(--navy-900), var(--navy-700));
+    color:#fff;
+    text-align:center;
+    padding:52px 0 56px;
+  }
+  .final-cta h2{font-size:clamp(24px,5.5vw,32px); margin-bottom:10px;}
+  .final-cta p{color:#C7CCE6; max-width:440px; margin:0 auto 26px; font-size:15px;}
+  .final-cta .btn{max-width:360px; margin:0 auto;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy-900);
+    color:#6C76A6;
+    font-size:12px;
+    text-align:center;
+    padding:22px 20px 30px;
+    line-height:1.6;
+  }
+  footer strong{color:#9AA3CC;}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:50;
+    background:rgba(11,19,48,0.92);
+    backdrop-filter:blur(8px);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    border-top:1px solid rgba(255,255,255,0.12);
+  }
+  .sticky-cta .btn{padding:13px 18px; font-size:15px;}
+
+  /* push content up so sticky bar doesn't cover footer CTA button area */
+  body{padding-bottom:74px;}
+
+  /* ---------- Desktop breakpoints ---------- */
+  @media (min-width:760px){
+    body{padding-bottom:0;}
+    .sticky-cta{display:none;}
+    .hero-grid{grid-template-columns:1.1fr 0.9fr; align-items:center; gap:40px;}
+    .feature-grid{grid-template-columns:repeat(4,1fr);}
+    .extras-grid{grid-template-columns:repeat(2,1fr);}
+    .proof-section{grid-template-columns:0.9fr 1.1fr;}
+    .btn{width:auto;}
+    .final-cta .btn{width:auto; padding-left:40px; padding-right:40px;}
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-badge">⚡ Zona Querétaro Exclusiva</div>
-        <h1>INTERNET ULTRA-RÁPIDO <span>200 MEGAS</span></h1>
-        <p class="subtitle">La velocidad que tu hogar exige sin caídas</p>
-    </header>
+<div class="topbar">
+  <span class="wrap">📍 Cobertura activa en <strong>Querétaro</strong> · Distribuidor Autorizado Megacable</span>
+</div>
 
-    <div class="container">
-        
-        <div class="urgency-box">
-            🚨 ¡Atención Querétaro! Quedan pocos puertos disponibles para instalación exprés hoy.
-        </div>
-
-        <!-- BOTÓN SUPERIOR -->
-        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" style="margin-bottom: 20px;" target="_blank">
-            ⚡ ¡Quiero Mis 200 Megas Ahora!
-        </a>
-
-        <!-- TARJETA PRINCIPAL DEL PAQUETE -->
-        <div class="card">
-            <span style="background: #2563eb; color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;">PAQUETE TOTAL + AMAZON PRIME</span>
-            
-            <div class="features-grid">
-                <div class="feature-box">
-                    <strong>🚀 200 Megas</strong>
-                    <span>Simétricos</span>
-                </div>
-                <div class="feature-box">
-                    <strong>📺 1500+ Canales</strong>
-                    <span>Streaming y TV</span>
-                </div>
-                <div class="feature-box">
-                    <strong>📞 Ilimitadas</strong>
-                    <span>Llamadas México</span>
-                </div>
-                <div class="feature-box">
-                    <strong>🎬 Amazon Prime</strong>
-                    <span>Series y Películas</span>
-                </div>
-            </div>
-
-            <div class="price-box">
-                <div class="price-label">Inversión mensual única</div>
-                <div class="price">$500 <span>MXN / mes</span></div>
-            </div>
-
-            <!-- BOTÓN EN MEDIO -->
-            <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" target="_blank">
-                💬 ¡Contratar Paquete de $500!
-            </a>
-        </div>
-
-        <!-- TARJETA DE REGALOS EXCLUSIVOS -->
-        <div class="gifts-card">
-            <h3>🎁 Regalos Exclusivos con Juan Carlos</h3>
-            <div class="gift-item">🤖 <strong>Alexa Gratis:</strong> Configuración digital para tu casa inteligente.</div>
-            <div class="gift-item">🧠 <strong>Inteligencia Artificial:</strong> Tu propia IA personalizada.</div>
-            <div class="gift-item">💾 <strong>Memoria en la Nube:</strong> 20 GB virtuales incluidos.</div>
-            <div class="gift-item">🌐 <strong>Navegador Especial:</strong> Disfruta YouTube sin anuncios.</div>
-        </div>
-
-        <!-- BOTÓN INFERIOR -->
-        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" target="_blank" style="background: #2563eb; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);">
-            🚀 Reclamar Mis Regalos por WhatsApp
-        </a>
-
-        <div style="text-align: center; margin-top: 25px; color: #64748b; font-size: 0.75rem;">
-            Megacable Autorizado Querétaro • Activación Exprés Directa
-        </div>
-
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="signal-lines" aria-hidden="true">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="none">
+      <path d="M0,320 C150,260 250,340 400,280 C550,220 650,300 800,240" stroke="#29D9C4" stroke-width="1.5" fill="none" opacity="0.5"/>
+      <path d="M0,360 C150,300 250,380 400,320 C550,260 650,340 800,280" stroke="#29D9C4" stroke-width="1" fill="none" opacity="0.3"/>
+    </svg>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge-row">
+        <span class="badge">✔ Distribuidor Autorizado</span>
+        <span class="badge">⚡ Instalación rápida</span>
+      </div>
+      <h1>Internet de <span>200 Megas</span> con TV y llamadas incluidas</h1>
+      <p class="hero-sub">Fibra Megacable para tu hogar en Querétaro: sin sorpresas, con instalación gestionada de principio a fin por un asesor real — no un bot.</p>
+      <div class="zone-line">
+        <span class="zone-dot" aria-hidden="true"></span>
+        Cobertura sujeta a validación de zona — te confirmamos por WhatsApp en minutos
+      </div>
     </div>
 
-    <!-- BOTÓN FLOTANTE ABAJO (STICKY) -->
-    <div class="sticky-footer">
-        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="sticky-btn" target="_blank">
-            💬 ¡QUIERO CONTRATAR AHORA!
-        </a>
+    <div class="speed-card">
+      <div class="speed-card-top">
+        <span class="speed-label">Velocidad contratada</span>
+        <span class="speed-value mono">200 Mbps</span>
+      </div>
+      <div class="gauge" role="img" aria-label="Velocidad de 200 megas simétricos">
+        <div class="gauge-fill"></div>
+      </div>
+      <div class="gauge-scale">
+        <span>0</span><span>50</span><span>100</span><span>150</span><span>200+</span>
+      </div>
+
+      <div class="price-row">
+        <span class="price-num">$500</span>
+        <span class="price-period">MXN / mes</span>
+      </div>
+      <p class="price-note">Incluye 170 canales, llamadas ilimitadas a México y Amazon Prime. Sin letras chiquitas.</p>
+
+      <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
+        Quiero que confirmen mi cobertura
+      </a>
+
+      <div class="trust-strip">
+        <span>🔒 Atención directa</span>
+        <span>⚡ Respuesta inmediata</span>
+        <span>📶 Sin permanencia forzosa*</span>
+      </div>
     </div>
+  </div>
+</header>
+
+<!-- ================= FEATURES ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Qué incluye</span>
+    <h2 class="section-title">Un solo paquete, todo resuelto</h2>
+    <p class="section-sub">Esto es exactamente lo que se activa en tu domicilio — sin combos escondidos ni cargos extra.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M2 12a10 10 0 0 0 20 0"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <h3>200 Megas simétricos</h3>
+        <p>Fibra óptica real para varias personas conectadas a la vez, sin caídas en hora pico.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+        </div>
+        <h3>170 canales</h3>
+        <p>Señal de TV en vivo incluida, sin necesidad de contratar streaming por separado.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Llamadas ilimitadas</h3>
+        <p>A todo México, sin límite de minutos ni cargos por larga distancia nacional.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Amazon Prime incluido</h3>
+        <p>Series, películas y envíos, dentro del mismo paquete — parte oficial de la promoción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+<section class="steps-section">
+  <div class="wrap">
+    <span class="eyebrow">Proceso</span>
+    <h2 class="section-title">Así de simple es contratar</h2>
+    <p class="section-sub">Tres pasos, todo por WhatsApp con un asesor autorizado. Nada se paga hasta que confirmes que quieres continuar.</p>
+
+    <div class="step-list">
+      <div class="step">
+        <div class="step-num mono">01</div>
+        <div>
+          <h3>Escríbenos tu zona</h3>
+          <p>Nos compartes tu calle y colonia para validar cobertura real de fibra en tu domicilio. Es gratis y sin compromiso.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num mono">02</div>
+        <div>
+          <h3>Confirmamos tu instalación</h3>
+          <p>Si hay cobertura, agendamos fecha y te explicamos exactamente qué documentos se necesitan y por qué.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num mono">03</div>
+        <div>
+          <h3>Técnico instala en sitio</h3>
+          <p>Un técnico de Megacable llega a tu domicilio, instala el servicio y lo deja funcionando el mismo día de la cita.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXTRAS ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Extras del asesor</span>
+    <h2 class="section-title">Además, te ayudo a configurar esto</h2>
+    <p class="section-sub">No son parte de la promoción oficial de Megacable — son herramientas gratuitas que te dejo listas al momento de instalar, para que le saques más provecho a tu internet nuevo.</p>
+
+    <div class="extras-note">
+      💡 Todo esto son apps y servicios gratuitos disponibles públicamente. No tienen costo oculto ni reemplazan la promoción — es ayuda extra de configuración que te doy como parte de mi atención personalizada.
+    </div>
+
+    <div class="extras-grid">
+      <div class="extra-item">
+        <span class="extra-emoji">🗣️</span>
+        <div>
+          <h4>Asistente de voz para tu hogar</h4>
+          <p>Te configuro la app oficial de Alexa en tu celular para controlar recordatorios, música y noticias con la voz.</p>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-emoji">🎬</span>
+        <div>
+          <h4>App para ver streaming sin anuncios</h4>
+          <p>Te instalo un navegador que bloquea los comerciales al ver videos, con reproducción en segundo plano.</p>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-emoji">☁️</span>
+        <div>
+          <h4>20 GB en la nube</h4>
+          <p>Respaldo automático de tus fotos y documentos importantes, accesible desde cualquier dispositivo.</p>
+        </div>
+      </div>
+      <div class="extra-item">
+        <span class="extra-emoji">🤖</span>
+        <div>
+          <h4>Acceso a una IA de uso diario</h4>
+          <p>Te muestro cómo usar una herramienta de inteligencia artificial gratuita para tareas, dudas y redacción.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section>
+  <div class="wrap proof-section">
+    <div class="proof-photo">
+      <!-- Reemplaza esto por tu foto real: <img src="tu-foto.jpg" alt="Juan Carlos, asesor autorizado Megacable en Querétaro"> -->
+      📸 Aquí va tu foto real<br>(instalación, gafete o tú con uniforme Megacable)
+    </div>
+    <div>
+      <span class="eyebrow">Quién te atiende</span>
+      <h2 class="section-title">Un asesor con nombre, no un formulario</h2>
+      <p class="section-sub">Soy Juan Carlos, distribuidor autorizado de Megacable en Querétaro. Yo mismo doy seguimiento a tu contratación, desde la cotización hasta que el técnico deja instalado el servicio en tu casa.</p>
+      <p class="section-sub" style="margin-bottom:0;">Los logos y marcas mencionadas son propiedad de Megacable Comunicaciones. Cobertura sujeta a validación de zona geográfica.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Dudas frecuentes</span>
+    <h2 class="section-title">Antes de escribir, esto te interesa saber</h2>
+
+    <div>
+      <details class="faq-item" open>
+        <summary>¿Por qué me piden mi INE y comprobante de domicilio?</summary>
+        <p>Es un requisito estándar de Megacable para dar de alta cualquier contrato de telecomunicaciones a tu nombre, igual que con cualquier operador. Solo se solicita una vez que confirmamos cobertura en tu zona.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tarda la instalación?</summary>
+        <p>Depende de la disponibilidad de técnicos en tu zona; normalmente se agenda en los días siguientes a la validación de cobertura. Te damos fecha exacta por WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿El precio de $500 tiene algún cargo extra?</summary>
+        <p>El paquete incluye 200 Megas, 170 canales, llamadas ilimitadas y Amazon Prime. Cualquier costo de instalación o depósito, si aplica, se te informa por escrito antes de confirmar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que quedarme forzado un tiempo mínimo?</summary>
+        <p>Las condiciones de permanencia dependen del plan y promoción vigente al momento de tu contratación; te las confirmamos con claridad antes de que firmes o pagues cualquier cosa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Es seguro dar mis datos por WhatsApp?</summary>
+        <p>Hablas directamente conmigo como asesor autorizado, con nombre y seguimiento personal — no con un formulario anónimo. Puedes pedir verificación antes de compartir cualquier documento.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>¿Listo para tener 200 Megas en casa?</h2>
+    <p>Escríbeme ahora y te confirmo cobertura en tu zona en minutos, sin compromiso.</p>
+    <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
+      Confirmar cobertura por WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Juan Carlos</strong> · Distribuidor Autorizado de Megacable en Querétaro</p>
+  <p>Los logos y marcas mencionados son propiedad de Megacable Comunicaciones y Amazon. Promoción sujeta a cambios y disponibilidad. Cobertura sujeta a validación de zona geográfica. Los recursos digitales adicionales ofrecidos por el asesor son aplicaciones gratuitas de terceros y no forman parte de la promoción oficial de Megacable.</p>
+</footer>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta">
+  <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
+    Contratar por WhatsApp
+  </a>
+</div>
 
 </body>
 </html>
