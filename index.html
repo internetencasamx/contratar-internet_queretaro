@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megacable Querétaro | 200 Megas + TV + Telefonía $500</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            line-height: 1.5;
+            padding-bottom: 100px;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border-bottom: 3px solid #3b82f6;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        .logo-badge {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        h1 span {
+            color: #38bdf8;
+        }
+        .subtitle {
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .urgency-box {
+            width: 100%;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card {
+            width: 100%;
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 2px solid #334155;
+            border-radius: 18px;
+            padding: 24px 18px;
+            text-align: center;
+            box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 5px;
+            background: linear-gradient(90deg, #22c55e, #3b82f6);
+            border-radius: 18px 18px 0 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .feature-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 10px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feature-box strong {
+            display: block;
+            color: #38bdf8;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+        .feature-box span {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+        }
+        .price-box {
+            margin: 15px 0 20px 0;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 12px;
+            border-radius: 12px;
+        }
+        .price-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
+        .price {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #22c55e;
+            line-height: 1.1;
+        }
+        .price span {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            font-weight: 400;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: #22c55e;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 800;
+            padding: 16px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.45);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .gifts-card {
+            width: 100%;
+            background: #111827;
+            border: 2px solid #1f2937;
+            border-radius: 18px;
+            padding: 22px 18px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .gifts-card h3 {
+            color: #f8fafc;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid #374151;
+            padding-bottom: 10px;
+        }
+        .gift-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+        .gift-item strong {
+            color: #38bdf8;
+            display: inline-block;
+        }
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 16px;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+        .sticky-btn {
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 14px 20px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(34, 197, 94, 0.5);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-badge">⚡ Zona Querétaro Exclusiva</div>
+        <h1>INTERNET ULTRA-RÁPIDO <span>200 MEGAS</span></h1>
+        <p class="subtitle">La velocidad que tu hogar exige sin caídas</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="urgency-box">
+            🚨 ¡Atención Querétaro! Quedan pocos puertos disponibles para instalación exprés hoy.
+        </div>
+
+        <!-- BOTÓN SUPERIOR -->
+        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" style="margin-bottom: 20px;" target="_blank">
+            ⚡ ¡Quiero Mis 200 Megas Ahora!
+        </a>
+
+        <!-- TARJETA PRINCIPAL DEL PAQUETE -->
+        <div class="card">
+            <span style="background: #2563eb; color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700;">PAQUETE TOTAL + AMAZON PRIME</span>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <strong>🚀 200 Megas</strong>
+                    <span>Simétricos</span>
+                </div>
+                <div class="feature-box">
+                    <strong>📺 1500+ Canales</strong>
+                    <span>Streaming y TV</span>
+                </div>
+                <div class="feature-box">
+                    <strong>📞 Ilimitadas</strong>
+                    <span>Llamadas México</span>
+                </div>
+                <div class="feature-box">
+                    <strong>🎬 Amazon Prime</strong>
+                    <span>Series y Películas</span>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <div class="price-label">Inversión mensual única</div>
+                <div class="price">$500 <span>MXN / mes</span></div>
+            </div>
+
+            <!-- BOTÓN EN MEDIO -->
+            <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" target="_blank">
+                💬 ¡Contratar Paquete de $500!
+            </a>
+        </div>
+
+        <!-- TARJETA DE REGALOS EXCLUSIVOS -->
+        <div class="gifts-card">
+            <h3>🎁 Regalos Exclusivos con Juan Carlos</h3>
+            <div class="gift-item">🤖 <strong>Alexa Gratis:</strong> Configuración digital para tu casa inteligente.</div>
+            <div class="gift-item">🧠 <strong>Inteligencia Artificial:</strong> Tu propia IA personalizada.</div>
+            <div class="gift-item">💾 <strong>Memoria en la Nube:</strong> 20 GB virtuales incluidos.</div>
+            <div class="gift-item">🌐 <strong>Navegador Especial:</strong> Disfruta YouTube sin anuncios.</div>
+        </div>
+
+        <!-- BOTÓN INFERIOR -->
+        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="btn" target="_blank" style="background: #2563eb; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);">
+            🚀 Reclamar Mis Regalos por WhatsApp
+        </a>
+
+        <div style="text-align: center; margin-top: 25px; color: #64748b; font-size: 0.75rem;">
+            Megacable Autorizado Querétaro • Activación Exprés Directa
+        </div>
+
+    </div>
+
+    <!-- BOTÓN FLOTANTE ABAJO (STICKY) -->
+    <div class="sticky-footer">
+        <a href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20oferta%20de%20los%20200%20megas%20con%20tus%20regalos%2C%20quiero%20contratar%20Juan%20Carlos" class="sticky-btn" target="_blank">
+            💬 ¡QUIERO CONTRATAR AHORA!
+        </a>
+    </div>
+
+</body>
+</html>
