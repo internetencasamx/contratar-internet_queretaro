@@ -220,6 +220,51 @@
   .btn-wa:hover{background:var(--wa-green-dark);}
   .btn svg{flex-shrink:0;}
 
+  .location-hint{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    color:#9AA3CC;
+    margin-top:9px;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .secondary-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+    margin-top:14px;
+  }
+  .btn-mini{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-size:12.5px;
+    font-weight:600;
+    padding:11px 10px;
+    border-radius:9px;
+    text-decoration:none;
+    text-align:center;
+    line-height:1.2;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-mini:hover{transform:translateY(-1px);}
+  .btn-mini-ghost{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.16);
+    color:#D7DAF0;
+  }
+  .btn-mini-ghost:hover{background:rgba(255,255,255,0.1);}
+  .btn-mini-hbo{
+    background:rgba(255,90,54,0.1);
+    border:1px solid rgba(255,90,54,0.35);
+    color:#FFB199;
+  }
+  .btn-mini-hbo:hover{background:rgba(255,90,54,0.16);}
+
   .trust-strip{
     margin-top:16px;
     display:flex;
@@ -481,17 +526,27 @@
         <span class="price-num">$500</span>
         <span class="price-period">MXN / mes</span>
       </div>
-      <p class="price-note">Incluye 170 canales, llamadas ilimitadas a México y Amazon Prime. Sin letras chiquitas.</p>
+      <p class="price-note">Incluye 170 canales, llamadas ilimitadas a México y Amazon Prime. 🔧 Instalación en 3 a 5 días. Solo $100 de adelanto (se descuenta de tu primera mensualidad). Plazo mínimo de 6 meses.</p>
 
-      <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+      <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20quiero%20mi%20paquete%20de%20200%20Megas.%20Te%20comparto%20mi%20ubicaci%C3%B3n%20para%20que%20confirmen%20cobertura%3A" target="_blank" rel="noopener">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
-        Quiero que confirmen mi cobertura
+        Quiero mis 200 Megas
       </a>
+      <p class="location-hint">📍 Comparte tu ubicación en el chat, o solo escribe "quiero hablar con un asesor"</p>
+
+      <div class="secondary-actions">
+        <a class="btn-mini btn-mini-ghost" href="https://m.youtube.com/shorts/eNcto4cQKeI" target="_blank" rel="noopener">
+          🎁 ¿Qué regalos me dan?
+        </a>
+        <a class="btn-mini btn-mini-hbo" href="https://wa.me/524464044521?text=Hola%2C%20me%20interesan%20los%20200%20Megas%20pero%20lo%20quiero%20con%20HBO%20Max%20(%2B%2480%20MXN%2C%20sin%20costo%20de%20activaci%C3%B3n)." target="_blank" rel="noopener">
+          + Súmale HBO $80
+        </a>
+      </div>
 
       <div class="trust-strip">
         <span>🔒 Atención directa</span>
         <span>⚡ Respuesta inmediata</span>
-        <span>📶 Sin permanencia forzosa*</span>
+        <span>📅 Instalación en 3-5 días</span>
       </div>
     </div>
   </div>
@@ -618,7 +673,7 @@
 <section>
   <div class="wrap proof-section">
     <div class="proof-photo">
-      <img src="https://drive.google.com/file/d/1gZfvBCfo42eFaNqkK4c7SnyEJh-WCfCQ/view?usp=drivesdk" alt="Juan Carlos, asesor autorizado Megacable en Querétaro">
+      <img src="https://drive.google.com/uc?export=view&id=1gZfvBCfo42eFaNqkK4c7SnyEJh-WCfCQ" alt="Juan Carlos, asesor autorizado Megacable en Querétaro">
     </div>
     <div>
       <span class="eyebrow">Quién te atiende</span>
@@ -628,6 +683,7 @@
     </div>
   </div>
 </section>
+
 <!-- ================= FAQ ================= -->
 <section>
   <div class="wrap">
@@ -641,15 +697,15 @@
       </details>
       <details class="faq-item">
         <summary>¿Cuánto tarda la instalación?</summary>
-        <p>Depende de la disponibilidad de técnicos en tu zona; normalmente se agenda en los días siguientes a la validación de cobertura. Te damos fecha exacta por WhatsApp.</p>
+        <p>La instalación se realiza entre 3 y 5 días después de confirmar tu cobertura y agendar la cita. Te confirmamos la fecha exacta por WhatsApp.</p>
       </details>
       <details class="faq-item">
         <summary>¿El precio de $500 tiene algún cargo extra?</summary>
-        <p>El paquete incluye 200 Megas, 170 canales, llamadas ilimitadas y Amazon Prime. Cualquier costo de instalación o depósito, si aplica, se te informa por escrito antes de confirmar.</p>
+        <p>El paquete incluye 200 Megas, 170 canales, llamadas ilimitadas y Amazon Prime por $500 al mes. Se solicita un adelanto de $100 al contratar, que se descuenta de tu primera mensualidad — no es un cargo adicional.</p>
       </details>
       <details class="faq-item">
         <summary>¿Tengo que quedarme forzado un tiempo mínimo?</summary>
-        <p>Las condiciones de permanencia dependen del plan y promoción vigente al momento de tu contratación; te las confirmamos con claridad antes de que firmes o pagues cualquier cosa.</p>
+        <p>Sí, el plan tiene un plazo mínimo de 6 meses. Te lo confirmamos con claridad antes de que firmes o pagues cualquier cosa, sin sorpresas después.</p>
       </details>
       <details class="faq-item">
         <summary>¿Es seguro dar mis datos por WhatsApp?</summary>
@@ -663,11 +719,19 @@
 <section class="final-cta">
   <div class="wrap">
     <h2>¿Listo para tener 200 Megas en casa?</h2>
-    <p>Escríbeme ahora y te confirmo cobertura en tu zona en minutos, sin compromiso.</p>
-    <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+    <p>Comparte tu ubicación por WhatsApp y te confirmo cobertura en minutos, sin compromiso.</p>
+    <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20quiero%20mi%20paquete%20de%20200%20Megas.%20Te%20comparto%20mi%20ubicaci%C3%B3n%20para%20que%20confirmen%20cobertura%3A" target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
-      Confirmar cobertura por WhatsApp
+      Quiero mis 200 Megas
     </a>
+    <div class="secondary-actions" style="max-width:360px; margin:14px auto 0;">
+      <a class="btn-mini btn-mini-ghost" href="https://m.youtube.com/shorts/eNcto4cQKeI" target="_blank" rel="noopener">
+        🎁 ¿Qué regalos me dan?
+      </a>
+      <a class="btn-mini btn-mini-hbo" href="https://wa.me/524464044521?text=Hola%2C%20me%20interesan%20los%20200%20Megas%20pero%20lo%20quiero%20con%20HBO%20Max%20(%2B%2480%20MXN%2C%20sin%20costo%20de%20activaci%C3%B3n)." target="_blank" rel="noopener">
+        + Súmale HBO $80
+      </a>
+    </div>
   </div>
 </section>
 
@@ -678,9 +742,9 @@
 
 <!-- Sticky mobile CTA -->
 <div class="sticky-cta">
-  <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20200%20Megas%20por%20%24500%2C%20quiero%20que%20me%20confirmen%20cobertura%20en%20mi%20zona." target="_blank" rel="noopener">
+  <a class="btn btn-wa" href="https://wa.me/524464044521?text=Hola%2C%20quiero%20mi%20paquete%20de%20200%20Megas.%20Te%20comparto%20mi%20ubicaci%C3%B3n%20para%20que%20confirmen%20cobertura%3A" target="_blank" rel="noopener">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.83 14.13c-.25.7-1.45 1.34-2 1.42-.51.08-1.15.11-1.86-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07s.77-2.18 1.04-2.48c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.27 1.64 2.06 1.13 1.02 2.07 1.34 2.37 1.49.3.15.48.13.65-.08.18-.2.75-.88.96-1.18.2-.3.4-.25.68-.15.27.1 1.75.83 2.05.98.3.15.5.23.58.36.07.13.07.75-.18 1.45z"/></svg>
-    Contratar por WhatsApp
+    Quiero mis 200 Megas
   </a>
 </div>
 
